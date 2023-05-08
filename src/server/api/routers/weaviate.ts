@@ -15,7 +15,7 @@ import { env } from "~/env.mjs";
 export const wvClient = weaviate.client({
   scheme: "https",
   host: env.WEAVIATE_HOST,
-  apiKey: new weaviate.ApiKey(env.WEAVIATE_API_KEY),
+  apiKey: new weaviate.ApiKey(env.WEAVIATE_API_KEY)
 });
 
 const embeddings = new OpenAIEmbeddings({ openAIApiKey: env.OPENAI_API_KEY });
